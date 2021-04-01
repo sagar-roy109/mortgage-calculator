@@ -1,0 +1,9 @@
+@media all and (max-width: 767px){
+    .rs-container.rs-noscale{
+        width: 95%  !important;
+    }
+
+    .rs-container .rs-scale span ins{
+        display: none;
+    }
+}
