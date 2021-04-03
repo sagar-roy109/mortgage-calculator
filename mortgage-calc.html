@@ -22,7 +22,7 @@
                 <div class="mortgage-calc-wrapper">
                     <div class="row">
                         <div class="col-md-4">
-                            <div class="calc-left-side">
+                            <div class="calc-left-side shadow">
                                 <h3>Enter your details</h3>
                                 <div class="mortgage-type">
                                     <div class="tool-tip-container">
@@ -40,23 +40,177 @@
                                         </span>
                                     </div>
                                     <div class="mortgage-type-selector">
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                            <label class="form-check-label" for="inlineRadio1">1</label>
+                                        <div class="form-check-inline">
+
+                                            <div class="button-holder mr">
+                                                <input class="form-check-input radio" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+                                                <label class="form-check-label" for="inlineRadio1">New Mortgage</label>
+                                            </div>
+                                           
                                           </div>
-                                          <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                            <label class="form-check-label" for="inlineRadio2">2</label>
+                                          <div class=" form-check-inline">
+                                              <div class="button-holder">
+                                                <input class="form-check-input radio" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                <label class="form-check-label" for="inlineRadio2">Remortgage</label>
+                                              </div>
+                                           
                                           </div>    
                                     </div>
                                 </div>
+                                <div class="income">
+                                    <div class="tool-tip-container">
+                                        <span class="text-left label">What's your income ?</span>
+                                        <span class="tool-tip">
+                                            <span class="text-right" id="toolTipTwo">i</span>
+                                            <p class="tool-tip-content" id="tooTipContentTwo">
+                                                If you’re applying with someone else, include theirs too. This means all types of income you get in a year: from bonuses, to overtime, to rental income.
+                                                
+                                            </p>
+                                        </span>
+                                    </div>
+                                    <div class="income-input">
+                                        <div class="input-group input-group-lg">
+                                            <span class="input-group-text" id="inputGroup-sizing-lg">£</span>
+                                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                                          </div>
+                                    </div>
+                                </div>
+                                <div class="deposit">
+                                    <div class="tool-tip-container">
+                                        <span class="text-left label">How much is your deposit ?</span>
+                                        <span class="tool-tip">
+                                            <span class="text-right" id="toolTipTwo">i</span>
+                                            <p class="tool-tip-content" id="tooTipContentTwo">
+                                                The amount you have saved for deposit.
+                                            </p>
+                                        </span>
+                                    </div>
+                                    <div class="deposit-input">
+                                        <div class="input-group input-group-lg">
+                                            <span class="input-group-text" id="inputGroup-sizing-lg">£</span>
+                                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                                          </div>
+                                    </div>
+                                </div>
+                                <div class="rate-type">
+                                    <div class="tool-tip-container">
+                                        <span class="text-left label">Rate type</span>
+                                        <span class="tool-tip">
+                                            <span class="text-right" id="toolTipOne">i</span>
+                                            <p class="tool-tip-content" id="tooTipContentOne">
+                                                Fixed rate: your interest rate (which affects what you pay each month) is guaranteed over a fixed period of time, and won’t change.
+                                                <br>
+                                                <br>
+                                                Variable rate: your interest rate could go up or down, so what you pay each month could change. During the initial period, you get a discount on your variable rate.
+                                            </p>
+                                        </span>
+                                    </div>
+                                    <div class="rate-type-selector">
+                                        <div class="form-check-inline">
+
+                                            <div class="button-holder mr">
+                                                <input class="form-check-input radio" type="radio" name="rateType" id="fixed" value="option1" checked >
+                                                <label class="form-check-label" for="fixed">Fixed</label>
+                                            </div>
+                                           
+                                          </div>
+                                          <div class=" form-check-inline">
+                                              <div class="button-holder">
+                                                <input class="form-check-input radio" type="radio" name="rateType" id="variable" value="option2">
+                                                <label class="form-check-label" for="variable">Variable</label>
+                                              </div>
+                                           
+                                          </div>    
+                                    </div>
+                                </div>
+                                <div class="initial-period">
+                                    <div class="tool-tip-container">
+                                        <span class="text-left label">Inital period (years)</span>
+                                        <span class="tool-tip">
+                                            <span class="text-right" id="toolTipOne">i</span>
+                                            <p class="tool-tip-content" id="tooTipContentOne">
+                                                For the first few years of your mortgage, you’ll get a lower than standard interest rate. Think of it like an introductory offer from your lender. You can set how long this lasts here.
+                            
+                                            </p>
+                                        </span>
+                                    </div>
+                                    <div class="period-selector">
+                                        <div class="form-check-inline">
+
+                                            <div class="button-holder">
+                                                <input class="form-check-input radio" type="radio" name="period" id="periodTwo" value="option1" checked>
+                                                <label class="form-check-label" for="periodTwo">2</label>
+                                            </div>
+                                           
+                                          </div>
+                                          <div class=" form-check-inline">
+                                              <div class="button-holder">
+                                                <input class="form-check-input radio" type="radio" name="period" id="periodThree" value="option2">
+                                                <label class="form-check-label" for="periodThree">3</label>
+                                              </div>
+                                           
+                                          </div>    
+                                          <div class="form-check-inline">
+
+                                            <div class="button-holder">
+                                                <input class="form-check-input radio" type="radio" name="period" id="periodFour" value="option1" >
+                                                <label class="form-check-label" for="periodFour">4</label>
+                                            </div>
+                                           
+                                          </div>
+                                          <div class=" form-check-inline">
+                                              <div class="button-holder">
+                                                <input class="form-check-input radio" type="radio" name="period" id="periodFive" value="option2">
+                                                <label class="form-check-label" for="periodFive">5</label>
+                                              </div>
+                                           
+                                          </div> 
+                                    </div>
+                                </div>
+                                <div class="mortgage-term">
+                                    <div class="tool-tip-container">
+                                        <span class="text-left label">Mortgage term</span>
+                                        <span class="tool-tip">
+                                            <span class="text-right" id="toolTipTwo">i</span>
+                                            <p class="tool-tip-content" id="tooTipContentTwo">
+                                                The total length of your loan – how many years you’ll take to pay back your mortgage.
+                                            </p>
+                                        </span>
+                                    </div>
+                                    <div class="year-input">
+                                        <div class="input-group input-group-lg">
+                                            <input type="text" class="form-control" >
+                                            <span class="input-group-text" id="basic-addon2">Years</span>
+                                          </div>
+                                    </div>
+                                    
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-8"></div>
+                        <div class="col-md-8">
+                            <div class="mortgage-out-put shadow">
+                                <h3 class="text-center">You may borrow maximum of</h3>
+                                <h1 class="output text-center">£<span id="output">124411</span></h1>
+                                <h4 class="total-amount-des text-center">
+                                    This means, with your deposit, you can get a home worth 
+                                </h4>
+                                <h4 class="total-amout text-center">£<span id="total-amount">124411</h4>
+                                
+                                <div class="next-step text-center">
+                                    <p><b>
+                                        Next Step 
+                                        <br>
+                                        Application is fast and no obligation. No Fees.
+                                    </b></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <script src="assets/js/jquery-3.6.0.js"></script>
+        <script src="mortgage-jquery.js"></script>
         <script src="mortgage.js"></script>
     </body>
 </html>
