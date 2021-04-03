@@ -158,6 +158,10 @@ border: 1px solid #949AB6;
     padding: 14px 32px 14px 14px;
 }
 
+.mortgage-calc .rate-type-selector label{
+    padding: 14px 82px 14px 14px;
+}
+
 .mortgage-calc .form-check-input
  {
     margin-top: 16px;

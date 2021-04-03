@@ -7,3 +7,38 @@
         display: none;
     }
 }
+
+
+/*** MORTGAGE CALC ***/
+
+@media all and (max-width:440px){
+    .mortgage-calc .mortgage-type label{
+        padding: 14px 27px 14px 14px;
+    }
+    .mortgage-calc .rate-type-selector label{
+        padding: 14px 70px 14px 14px;
+    }
+    .mortgage-calc .period-selector label{
+        padding: 14px 26px 14px 14px;
+    }
+}
+
+@media all and (max-width: 423px){
+    .mortgage-calc .mortgage-type label{
+        padding: 14px 12px 14px 4px;
+    }
+    .mortgage-calc .rate-type-selector label{
+        padding: 14px 48px 14px 10px;
+    }
+    .mortgage-calc .period-selector label{
+        padding: 13px 20px 14px 8px;
+    }
+}
+
+
+@media all and ( max-width: 991px){
+    .mortgage-calc .mortgage-out-put{
+        margin-top: 30px;
+    }
+}
+
