@@ -1,27 +1,53 @@
 
+
+
+let incomeAmout = null;
+let depositAmount = null;
+let mortgageTypeNew = null;
+let mortgageTypeRe = null;
+const maxLoan = document.getElementById('output');
+const homeLoan = document.getElementById('totalAmount');
+const income = document.getElementById('income');
+const deposit = document.getElementById('deposit');
+
+
+// Show output after loading template
+
+
+maxLoan.innerText = +income.value * 4.5;
+homeLoan.innerText = (+income.value * 4.5) + (+deposit.value);
+
+
+
 // Get income Amount
 
-const income = document.getElementById('income');
-income.addEventListener('input', function(){
-    let incomeAmout = +income.value;
+
+income.addEventListener('input', function () {
+
+    incomeAmout = +income.value;
+
+    mortgageCalc();
+
 })
 
 
 //Get Deposit Amount 
-const deposit = document.getElementById('deposit');
-deposit.addEventListener('input', function(){
-    let depositAmount = +deposit.value ;
-    
+
+deposit.addEventListener('input', function () {
+
+    depositAmount = +deposit.value;
+
+    mortgageCalc();
 })
 
 
 // Get Mortgage Term
 const term = document.getElementById('term');
 
-term.addEventListener('input', function(){
-    let termAmount = +term.value ;
-   
-    
+term.addEventListener('input', function () {
+    let termAmount = +term.value;
+
+
 })
 
 
@@ -29,36 +55,39 @@ term.addEventListener('input', function(){
 
 //mortgage type
 const newMortgage = document.getElementById('newMortgage');
-newMortgage.addEventListener('click', function(){
-    let mortgageTypeNew = newMortgage.value ;
-    
-    
+newMortgage.addEventListener('click', function () {
+    mortgageTypeNew = newMortgage.value;
+
+    mortgageCalc();
+
+
 })
 
 
 const reMortgage = document.getElementById('reMortgage');
-reMortgage.addEventListener('click', function(){
-    let mortgageTypeRe = reMortgage.value ;
-   
-    
+reMortgage.addEventListener('click', function () {
+    mortgageTypeRe = reMortgage.value;
+
+    mortgageCalc();
+
 })
 
 
 // Get Rate Type
 
 const fixed = document.getElementById('fixed');
-fixed.addEventListener('click', function(){
-    let fixedRate = fixed.value ;
-    
-    
+fixed.addEventListener('click', function () {
+    let fixedRate = fixed.value;
+
+
 })
 
 
 const variable = document.getElementById('variable');
-variable.addEventListener('click', function(){
-    let variableRate = variable.value ;
-    
-    
+variable.addEventListener('click', function () {
+    let variableRate = variable.value;
+
+
 })
 
 
@@ -66,44 +95,74 @@ variable.addEventListener('click', function(){
 // Get Period
 
 const two = document.getElementById('periodTwo');
-two.addEventListener('click', function(){
-    let twoYear = +two.value ;
-    
-    
+two.addEventListener('click', function () {
+    let twoYear = +two.value;
+
+
 })
 
 
 const three = document.getElementById('periodThree');
-three.addEventListener('click', function(){
-    let threeYear = +three.value ;
-    
-    
+three.addEventListener('click', function () {
+    let threeYear = +three.value;
+
+
 })
 
 
 const four = document.getElementById('periodFour');
-four.addEventListener('click', function(){
-    let fourYear = +four.value ;
-    
-    
+four.addEventListener('click', function () {
+    let fourYear = +four.value;
+
+
 })
 
 
 const five = document.getElementById('periodFive');
-five.addEventListener('click', function(){
-    let fiveYear = +five.value ;
-   
-    
+five.addEventListener('click', function () {
+    let fiveYear = +five.value;
+
+
 })
 
 
 
-// Get Output
+// Calculation
 
-const outPut = document.getElementById('output');
-let outPutAmount = +outPut.innerText;
+function mortgageCalc() {
 
-const total = document.getElementById('totalAmount');
-let totalAmount = +total.innerText;
+    depositAmount = +deposit.value;
+    incomeAmout = +income.value
+
+    if (mortgageTypeNew == "newMortgage") {
+        let maxLoanAmount = incomeAmout * 4.5;
+        let HomeAmount = maxLoanAmount + depositAmount;
+        maxLoan.innerText = maxLoanAmount;
+        homeLoan.innerText = HomeAmount;
+        mortgageTypeNew = "";
+        mortgageTypeRe  = "";
+    }
+
+    else if (mortgageTypeRe == "reMortgage") {
+        let maxLoanAmount = incomeAmout * 4.6;
+        let HomeAmount = maxLoanAmount + depositAmount;
+        maxLoan.innerText = maxLoanAmount;
+        homeLoan.innerText = HomeAmount;
+        mortgageTypeRe = "reMortgage";
+    }
+    else {
+        let maxLoanAmount = incomeAmout * 4.5;
+        let HomeAmount = maxLoanAmount + depositAmount;
+        maxLoan.innerText = maxLoanAmount;
+        homeLoan.innerText = HomeAmount;
+
+    }
+
+
+
+}
+
+
+
 
 
